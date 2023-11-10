@@ -1,22 +1,37 @@
 # react-native-alert-picker
 
-Alert picker
+Radio list picker in the Native dialog
+
+# ANDROID ONLY
 
 ## Installation
+
+# npm
 
 ```sh
 npm install react-native-alert-picker
 ```
 
+# yarn
+
+```sh
+yarn add react-native-alert-picker
+```
+
 ## Usage
 
-
 ```js
-import { multiply } from 'react-native-alert-picker';
+import { openAlert } from 'react-native-alert-picker';
 
 // ...
 
-const result = multiply(3, 7);
+openAlert(
+  'Phone Ringtone',
+  ['None', 'Callisto', 'Ganymede', 'Luna', 'Oberon', 'Phobos', 'Dione'],
+  (selectedItem) => {
+    onSubmit(selectedItem);
+  }
+);
 ```
 
 ## Contributing
