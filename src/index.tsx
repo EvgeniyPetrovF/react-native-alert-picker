@@ -1,4 +1,4 @@
-import { Platform } from 'react-native';
+import { ActionSheetIOS, Platform } from 'react-native';
 
 const AlertPicker = require('./NativeAlertPicker').default;
 
@@ -11,5 +11,16 @@ export function openAlert(
 ): void {
   if (Platform.OS === 'android') {
     AlertPicker.openAlert(title, choices, onSubmit);
+  } else if (Platform.OS === 'ios') {
+    ActionSheetIOS.showActionSheetWithOptions(
+      {
+        title,
+        options: ['Cancel', ...choices],
+        cancelButtonIndex: 0,
+      },
+      (buttonIndex) => {
+        onSubmit(choices[buttonIndex - 1] ?? '');
+      }
+    );
   }
 }

@@ -1,8 +1,6 @@
 # react-native-alert-picker
 
-Radio list picker in the Native dialog
-
-# ANDROID ONLY
+List picker that uses native solutions
 
 ## Installation
 
