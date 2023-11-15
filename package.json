@@ -1,6 +1,6 @@
 {
   "name": "react-native-alert-picker",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Alert picker",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
